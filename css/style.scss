@@ -1,0 +1,491 @@
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/header";
+@import "partials/gallery";
+@import "partials/footer";
+
+@import url('https://fonts.googleapis.com/css?family=Rufina');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3 {
+	font-family: 'Rufina', serif;
+}
+
+h2 {
+	color: $brandHeaders;
+	font-size: 30px;
+	margin: 0;
+	padding: 20px 0;
+}
+
+.wrapper {
+	max-width: $wrapperWidth;
+	width: 80%;
+	margin: 0 auto;
+}
+
+// dessert pastries coffee section
+
+.desPasCof {
+	padding: 15% 0 5% 0;
+}
+
+.assortment{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.assortment p {
+	width: 75%;
+	margin-left: 10%;
+}
+
+// menu section
+
+.menu {
+	background-image: url("../images/menubg.png");
+	background-size: cover;
+	padding-bottom: 5%;
+}
+
+.menuOptions{
+	display: flex;
+	flex-direction: row;
+}
+
+.menuBoard {
+	display: flex;
+	flex-direction: column;
+	padding: 15% 0;
+	background-image: url("../images/menu.png");
+	background-position: center;
+	background-size: 353px;
+	background-repeat: no-repeat;
+}
+
+.menuBoard h2 {
+	align-self: center;
+	color: $white;
+}
+
+.options {
+	width: calc(50% - 40px);
+	margin: 20px;
+	padding: 10px 10px 10px 25px;
+	border: double 3px #5e5e64;
+	outline: solid 1px #5e5e64;
+}
+
+.options h3 {
+	color: $brandHeaders;
+	text-decoration: underline;
+	font-size: 20px;
+	padding: 10px 0 0 0;
+}
+
+.options h4 {
+	color: $white;
+	text-transform: uppercase;
+	font-size: 16px;
+	float: left;
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.last {
+	margin-top: 55px;
+}
+
+.options p {
+	color: #5e5e64;
+	width: 75%;
+}
+
+.price {
+	float: right;
+	padding-left: 5%;
+	width: 10%;
+}
+.pastryCoffee {
+	display: flex;
+	padding: 20px;
+	p {
+		display: block;
+	}
+}
+
+// about bakery section
+
+.about {
+	background-image: url("../images/aboutbg.png");
+	background-size: cover;
+}
+
+.family {
+	padding: 25px 0;
+	width: 50%;
+	line-height: 25px;
+	h2{
+		padding: 100px 0;	
+	}
+	img {
+		padding: 100px 0 125px 0;
+	}
+}	
+
+// journal section
+
+.journal {
+	background-image: url("../images/journalbg.png");
+	background-size: cover;			
+	padding: 5% 0;	
+	h2 {
+		padding-bottom: 50px;
+	}
+}
+
+// reservation section 
+
+.reservations {
+	background-image: url("../images/reservationbg.png");
+	background-size: cover;		
+	padding: 5% 0;	
+}
+
+.res {
+	display: flex;
+	flex-direction: row;
+}
+
+.resContent {
+	width: 30%;
+}
+
+.resContent p{
+	padding-bottom: 25px;
+}
+
+.resPhone {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	border: double 4px black;
+	outline: solid 3px black;
+	h2 {
+		padding: 0 15px 0 0;
+	}
+}
+
+.resPhoneNum {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.resPhoneNum p {
+	padding: 0;
+	margin:0;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.resPhoneNum p:last-of-type {
+	font-size: 18px;
+	font-weight: bold;	
+}
+
+.resForm, .resFormCon {
+	width: 70%;
+	padding: 0 5%;
+}
+
+.formRes, .formCon {
+	width: 100%;
+	border: double 4px black;
+	outline: solid 3px black;
+	background-color: white;	
+}
+
+.formRes input {
+	width: 50%;
+	border: 1px solid black;
+	margin-right:-5px;
+	padding: 25px 0;	
+}
+
+.formCon input {
+	width: 100%;
+	border: 1px solid black;
+	margin-right:-5px;
+	padding: 25px 0;		
+}
+
+.formRes input[name="date"] {
+	background-image:url('../images/icon-eventDate.png');
+	background-size: 20px;		
+	background-repeat: no-repeat;
+	background-position: 97% center;
+}
+
+.formRes input[name=time] {
+	background-image:url('../images/icon-eventClock.png');
+	background-size: 20px;	
+	background-repeat: no-repeat;
+	background-position: 97% center;	
+}
+
+.formRes textarea, .formCon textarea {
+	width: 100%;
+}
+
+.formRes button, .formCon button {	
+	width: 100%;
+	background-image:url('../images/seal.png');
+	background-size: 150px;
+	background-repeat: no-repeat;
+	background-position: 3% center;		
+	background-color: $white;
+	padding: 40px 0;
+	text-transform: uppercase;
+	border: 1px solid $black;
+}
+
+.formRes button:hover, .formCon button:hover {
+	background-color: $brandHeaders;
+	color: $white;
+}
+button {
+	font-weight: bold;
+}
+.formRes input::-webkit-input-placeholder, .formRes textarea::-webkit-input-placeholder, .formCon input::-webkit-input-placeholder, .formCon textarea::-webkit-input-placeholder {
+	padding: 25px;
+	color: $black;
+	font-weight: bold;
+}
+
+.socialIcons {
+	padding: 30px 0;
+	a{
+	color: $brandHeaders;
+	font-size: 20px;
+	}
+}	
+
+a .fa:hover {
+	color: $black;
+}
+
+.conContent .fa {
+	color: $brandHeaders;	
+}
+
+.fa {
+	padding-right: 10px;
+}
+
+.contact {
+	background-image: url("../images/contactbg.png");
+	background-size: cover;		
+	padding: 5% 0;	
+}
+
+.formCon {
+	width: 100%;
+	border: double 4px black;
+	outline: solid 3px black;
+	background-color: white;	
+}
+
+.formCon input {
+	width: 100%;
+	border: 1px solid black;
+	margin-right:-5px;	
+}
+
+// /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.desPasCof {
+		padding-top: 25%;
+	}
+
+	.assortment div {
+	 	padding: 0 5px;
+	}	
+
+	.assortment img {
+		height: 100px;
+	}
+
+	.menu {
+		padding-bottom: 25px;
+	}
+
+	.menuBoard {
+		padding-top: 10%;
+		h2 {
+			padding: 15% 0;
+		}
+	}
+
+	.last {
+		margin-top: 75px;
+	}
+
+	.family {
+		width: 70%;
+		h2{
+			padding: 50px 0;	
+		}
+		img {
+			padding: 100px 0 50px 0;
+		}
+	}
+
+	.conContent {
+		width: 40%;
+	}
+
+	.resFormCon{
+		width: 60%;
+	}
+
+	iframe {
+		width: 300px;
+		height: 300px;
+	}
+
+}
+
+// /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.assortment img {
+		height: 75px;
+	}	
+
+	.menu {
+		padding: 10% 0;
+	}
+
+	.menuBoard {
+		padding-left: 5%;
+	}
+
+	.menuOptions {
+		flex-direction: column;
+	}
+
+	.options {
+		width: 100%;	
+	}
+
+	.optionsMobile {
+		padding-bottom: 30%;
+	}
+
+	.family {
+		width: 80%;
+		h2{
+			padding: 25px 0;	
+		}
+		img {
+			padding: 75px 0 50px 0;
+		}
+	}
+
+	.res {
+		flex-direction: column;
+		padding-bottom: 5%;
+	}	
+
+	.resContent, .resForm {
+		width: 100%;
+	}
+
+	.resPhone {
+		width: 50%;
+		margin: 0 auto 5% auto;
+	}
+
+	.conContent {
+		width: 100%;
+	}
+
+	.conContent p {
+		display: inline-block;
+		padding-right: 10px;
+	}
+
+	.socialIcons {
+		text-align: center;
+		a {
+			font-size: 30px;
+		}
+	}
+
+	.resFormCon {
+		width: 100%;
+		padding-top: 5%;
+	}	
+
+	iframe {
+		width: 100%;
+	}
+}
+
+// /* Landscape phones and down */
+@media (max-width: 480px) {
+	.assortment {
+		flex-direction: column;
+		padding-top: 5%;
+	}
+
+	.menuBoard {
+		background-size: 75%;
+	}	
+
+	.last {
+		margin-top: 0;
+	}
+
+	.optionsMobile {
+		padding-bottom: 50%;
+	}
+
+	.options {
+		margin: 0;
+	}
+
+	.family {
+		width: 100%;
+	}
+
+	.resPhone {
+		width: 100%;
+		margin: 0 auto 5% auto;
+	}
+
+	.resForm, .resFormCon {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.formRes button, .formCon button {	
+		background-image:url('../images/seal.png');
+		background-size: 100px;
+	}	
+
+	.conContent p {
+		display: block;
+		text-align: center;
+	}	
+}

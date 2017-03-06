@@ -1,0 +1,126 @@
+footer {
+	background-image: url("../images/footerbg.png");
+	background-size: cover;		
+	padding: 5% 0;	
+	color: white;	
+}
+
+.foot {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto;
+	line-height: 25px;
+}
+
+.foot a {
+	color: $brandHeaders;
+	text-decoration: none;	
+}
+
+.footItems {
+	width: 33.3%;
+	h3 {
+		color: $white;
+		font-family: 'Raleway', sans-serif;	
+		text-transform: uppercase;	
+	}
+}
+
+.socIcons a {
+	color: white;
+	font-size: 20px;
+}
+
+.socIcons a .fa:hover {
+	color: $brandHeaders;
+}
+
+.social {
+	padding: 20px;
+}
+
+.social h3:last-of-type, .hours h3:last-of-type {
+	padding-top: 20px;
+}
+
+.custom {
+	padding: 20px 0 20px 10%;
+}
+
+ul.cusMenu {
+	padding: 0;
+}
+
+ul.cusMenu li {
+	list-style-type: none;
+}
+
+ul.cusMenu li a:hover, .hours a:hover, .social a:hover {
+	color: $white;
+}
+
+.hours {
+	padding: 20px;	
+}
+
+// /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+}
+
+// /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	.foot {
+		flex-direction: column;
+	}
+
+	.footItems {
+		width: 100%;
+	}	
+
+	.custom {
+		padding-left: 20px;
+		li {
+			display: inline-block;
+			padding-right: 5%;
+		}
+	}
+
+	.social, .custom, .hours {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.socIcons a {
+		font-size: 30px;
+	}
+
+	.hours p:nth-child(-n+3) {
+		display: inline-block;
+		padding-right: 5%;
+	}
+}	
+
+// /* Landscape phones and down */
+@media (max-width: 480px) {
+
+	.foot {
+		text-align: center;
+	}
+	.socIcons a:last-child .fa {
+		padding-right: 0;
+	}
+	.custom, .hours {
+		padding-top: 5px;
+	}
+
+	.custom li {
+		display: block;
+	}	
+
+	.hours p, {
+		padding: 0;
+		margin: 0;
+	}
+}

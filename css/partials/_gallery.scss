@@ -1,0 +1,267 @@
+.gallerySection {
+	background-image: url("../images/gallerybg.jpg");
+	background-size: cover;	
+	padding: 5% 0;
+}
+
+.yum {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
+aside {
+	align-self: flex-start;
+	padding: 20px 0;
+}
+
+.galleryList {
+	align-self: flex-start;
+	width: 20%;
+	border: double 4px black;
+	outline: solid 3px black;
+	font-family: 'Rufina', serif;	
+}
+
+.galleryList ul {
+	padding-left: 0;
+}
+
+.galleryList ul li {
+	list-style-type: none;
+	display: block;
+	text-align: right;
+	padding: 10px 30px 10px 0;
+}
+
+.galleryList ul li a {
+	text-decoration: none;
+	color: black;
+}
+
+.galleryList ul li::after {
+	content: "•";
+	padding-left: 10px;
+}
+
+.galleryList ul li a:hover, .galleryList ul li:hover::after {
+	color: $brandHeaders;
+}
+
+.galleryList ul li:hover::after {
+	content: "○";
+	padding-left: 8px;
+}
+
+.gallery-wrapper {
+	width: 70%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 0 25px 0;
+	margin: 0;	
+}
+
+.gallery-item {
+	list-style-type: none;
+	width: 33.3%;
+	padding:0;
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.journalGallery{
+	display: flex;
+	flex-direction: column;	
+}
+
+.journalGallery .gallery-item {
+	position: relative;	
+	overflow: hidden;	
+}
+
+.gallery-itemOverlay {
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;	
+   opacity:0;
+   -webkit-transition: opacity .25s ease;
+   text-decoration: none;
+}
+
+.blog {
+   background: rgba(255, 255, 255, 0.7);
+   text-align:right;
+   padding:125px 10px 0 0;  
+   text-decoration: none;   	
+}
+
+.blog a, .text a, .blog a:hover, .text a:hover {
+	color: $black;
+	text-decoration: none;
+}
+
+.text {
+   background: $white;
+   text-align:left;
+   padding:25px 0 0 15px;  
+}
+
+.gallery-itemOverlay:hover {
+	opacity:1;
+}
+
+.blogTitle {  
+	color: $black;
+	text-align: right;
+	margin:0;
+}
+
+p.blogDate {
+	background-color: $brandHeaders;
+	color: white;
+	display: inline-block;
+	padding: 10px;
+	font-size: 14px;
+	margin:0;
+}
+
+.journalGallery button {
+	align-self: center;
+	border: 2px solid $brandHeaders;
+	padding: 20px 25px;
+	background-color: #262422;
+	color: $brandHeaders;
+	margin: 25px 0;
+}
+
+.journalGallery button:hover {
+	background-color: $brandHeaders;
+	color: $white;
+}
+
+// /* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	.gallery-wrapper {
+		margin: 0;
+		width: 100%;
+	}	
+
+	.yum {
+		flex-direction: column;
+	}	
+
+	aside {
+		padding: 10px 0 10px 10px;
+	}	
+
+	.galleryList {
+		width: 100%;	
+		align-self: space-around;
+	}	
+
+	.galleryList ul {
+		padding-left: 10%;
+	}	
+
+	.galleryList ul li{
+		display: inline-block;
+	}
+
+	.galleryList ul li::after {
+		padding-left: 15px;
+	}	
+
+	.galleryList ul li:hover::after {
+		padding-left: 13px;
+	}	
+
+	.galleryList ul li:last-child::after {
+		content: none;
+	}
+
+	.gallery-item {
+		width: 50%;
+	}
+
+	.gallery {
+		padding-top: 25px;
+	}	
+
+	.gallery-item:last-of-type {
+		width: 100%;
+	}	
+
+}
+
+// /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	aside {
+		padding: 10px 0 10px 0;
+	}	
+
+	.galleryList ul {
+		padding-left: 5%;	
+	}	
+
+	.galleryList ul li {
+		padding:5px;
+	}	
+
+	.text {
+		padding: 5%;
+	}
+
+	p.blogDate {
+		padding: 5px;
+	}	
+}
+
+// /* Landscape phones and down */
+@media (max-width: 480px) {
+	.gallery-item {
+		width: 100%;
+	}
+
+	.galleryList {
+		width: 100%;		
+		margin: 0 auto;	
+		padding-right: 35%;			
+	}	
+
+	.galleryList ul {
+		padding-left: 0;
+	}	
+
+	.galleryList ul li {
+		display: block;
+	}	
+
+	.galleryList ul li:last-child::after {
+		 content: "•";
+	}
+
+	.galleryList ul li:last-child:hover::after {
+		content: "○";
+	}		
+
+	.text, .blog {
+	   background: rgba(255, 255, 255, 0.5);
+	}
+
+	.gallery-itemOverlay {
+		opacity:1;
+	}
+
+}
